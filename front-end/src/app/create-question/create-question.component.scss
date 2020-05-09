@@ -1,0 +1,34 @@
+// .create-question-container {
+//     width: 500px;
+// }
+
+:host {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+button {
+    margin: 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-question-form-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-bottom: 2px solid #673ab7;
+    margin-bottom: 10px;
+}
+
+quill-editor {
+    margin: 5px 0;
+}
+
+mat-form-field {
+    width: 200px;
+}

@@ -1,0 +1,35 @@
+<div class="create-question-container">
+  <form [formGroup]="finalExamQuestionForm" (ngSubmit)="onSubmit()">
+    <div class="create-question-form-controls">
+      <button mat-raised-button type="submit" color="primary">Create</button>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="category">
+        <mat-option
+          *ngFor="let category of categories"
+          [value]="category.value"
+        >
+          {{ category.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-label>Question:</mat-label>
+    <quill-editor
+      name="editor"
+      [styles]="quillEditorQuestionStyle"
+      formControlName="question"
+    ></quill-editor>
+
+    <mat-label>Answer:</mat-label>
+    <quill-editor
+      name="editor"
+      [styles]="quillEditorAnswerStyle"
+      formControlName="answer"
+    ></quill-editor>
+  </form>
+</div>
+
+
